@@ -32,6 +32,14 @@ Self-hosted dynamic DNS php script to update netcup DNS API from Router like AVM
 * Username: `<username as defined in .env file>`
 * Password: `<password as definied in .env file>`
 
+### UniFi Cloud Gateways (DreamMachine or Cloud Gateway)
+* Go to "Settings" -> "Internet" -> "WAN Interface"
+* Service: "dyndns"
+* Hostname: `gateway.domain.com` (A Record in NetCup that schould be updated)
+* Username: "ownDynDNS username"
+* Password: "ownDynDNS password"
+* Server: `ddns.domain.com/update.php/\/nic/update?user=%u&password=%p&ipv4=%i&force=0&mode=both&domain=%h`
+
 # run as cronjob on a **nix based device
 * see [examples](./examples)
 
